@@ -1,0 +1,5 @@
+Ces scripts PHP permettent d'activer ou non la detection de mouvement d'une caméma Foscam en fonction de l'état d'une alarme Somfy Protectiom.
+
+Modèles utilisés :
+- Foscam FI9821P v2 (devrait également fonctionner avec les autres modèles)
+- Somfy Protectiom 600 blanche (les urls des différents pages seront à adapter en fonction du modèle dans le fichier inc/Somfy.class.php)
