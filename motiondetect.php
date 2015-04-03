@@ -30,9 +30,9 @@ $somfy->logout();
 // Détermination de l'état de la caméra
 //**************************************
 
-
 // Si on a récupéré le statut de l'alarme, on détermine l'état de la caméra
 if(is_array($status)){
+
 
 	// On désactive la détection de mouvement si toutes les zones de l'alarme sont désactivées
     if($status['zone0'] == 'off' && $status['zone1'] == 'off' && $status['zone2'] == 'off'){
@@ -41,7 +41,7 @@ if(is_array($status)){
 	else {
 		$isEnable = 1;
 	}
-	
+
     // Suppression du fichier des erreurs pour RAZ compteur
 	if(file_exists($fichier_erreurs)){
 		unlink($fichier_erreurs);
@@ -77,7 +77,7 @@ else {
 // Paramétrage de la caméra 
 //**************************
 
-if($isEnable > 0){
+if($isEnable >= 0){
 
 
     echo "isEnable théorique : ".$isEnable."\n";
